@@ -1,0 +1,25 @@
+<resources>
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    -->
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light">
+        <!-- API 14 theme customizations can go here. -->
+        <item name="android:actionBarStyle">@style/PolyPickerActionBar</item>
+    </style>
+
+    <!--<style name="AppTheme" parent="AppBaseTheme">-->
+        <!--<item name="android:actionBarStyle">@style/PolyPickerActionBar</item>-->
+    <!--</style>-->
+
+    <style name="PolyPickerActionBar">
+        <item name="android:titleTextStyle">@style/PolyPickerActionBarTitleTextStyle</item>
+    </style>
+
+    <style name="PolyPickerActionBarTitleTextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>
