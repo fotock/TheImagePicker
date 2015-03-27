@@ -2,6 +2,8 @@
 Android library project for multiple image selection.
 Based on PolyPicker.
 
+Requires Android 4.0+.
+
 Features
 ==========
 * Multi-selection of images from gallery.
@@ -25,9 +27,7 @@ or Gradle:
 ```groovy
  compile 'com.sanfriend:theimagepicker:1.0.4@aar'
 ```
-or [Download JAR](https://bintray.com/artifact/download/fotock/maven/com/sanfriend/theimagepicker/1.0.4/theimagepicker-1.0.4-sources.jar)
-
-Requires Android 4.0+.
+or [Download JAR](https://bintray.com/artifact/download/fotock/maven/com/sanfriend/theimagepicker/1.0.4/theimagepicker-1.0.4-sources.jar).
 
 Getting started
 ==========
