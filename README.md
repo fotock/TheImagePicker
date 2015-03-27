@@ -12,7 +12,7 @@ Features
 
 ## Get it
 
-[Download JAR](https://bintray.com/artifact/download/fotock/maven/com/sanfriend/theimagepicker/1.0.4/theimagepicker-1.0.4-sources.jar) or via **Maven Central**
+Maven Central
 
 ```xml
 <dependency>
@@ -25,6 +25,7 @@ or Gradle:
 ```groovy
  compile 'com.sanfriend:theimagepicker:1.0.4@aar'
 ```
+or [Download JAR](https://bintray.com/artifact/download/fotock/maven/com/sanfriend/theimagepicker/1.0.4/theimagepicker-1.0.4-sources.jar)
 
 Requires Android 4.0+.
 
