@@ -10,21 +10,28 @@ Features
 * Select/capture images upto a specified limit.
 * Preview thumbnails of selected images.
 
-Download
-==========
-```groovy
+## Get it
 
-dependencies {
-    compile 'com.sanfriend:theimagepicker:1.0.4@aar'
-}
+[Download JAR](https://bintray.com/artifact/download/fotock/maven/com/sanfriend/theimagepicker/1.0.4/theimagepicker-1.0.4-sources.jar) or via **Maven Central**
 
+```xml
+<dependency>
+    <groupId>com.sanfriend</groupId>
+    <artifactId>theimagepicker</artifactId>
+    <version>1.0.4</version>
+</dependency>
 ```
+or Gradle:
+```groovy
+ compile 'com.sanfriend:theimagepicker:1.0.4@aar'
+```
+
 Requires Android 4.0+.
 
 Getting started
 ==========
 
-A. AndroidManifest.xml
+A. Add permission in AndroidManifest.xml
 
 ```xml
 <uses-feature android:name="android.hardware.camera" />
@@ -62,7 +69,7 @@ other applications to be kicked out of memory. Nothing very severe.
 
 ``
 
-Start TheImagePicker activity and get the result back.
+D. Start TheImagePicker activity and get the result back.
 
 ```java
 
