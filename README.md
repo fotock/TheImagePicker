@@ -1,6 +1,7 @@
 # TheImagePicker
 Android library project for multiple image selection.
-Based on PolyPicker.
+
+Based on PolyPicker. Fixed translation and autofocus bugs.
 
 Requires Android 4.0+.
 
@@ -12,9 +13,10 @@ Features
 * Select/capture images upto a specified limit.
 * Preview thumbnails of selected images.
 
-## Get it
+Get it
+==========
 
-Maven Central
+Maven Central:
 
 ```xml
 <dependency>
@@ -32,7 +34,7 @@ or [Download JAR](https://bintray.com/artifact/download/fotock/maven/com/sanfrie
 Getting started
 ==========
 
-A. Add permission in AndroidManifest.xml
+A. Add permissions in AndroidManifest.xml
 
 ```xml
 <uses-feature android:name="android.hardware.camera" />
@@ -43,6 +45,7 @@ A. Add permission in AndroidManifest.xml
 ```
 
 B. Declare TheImagePicker activity in your AndroidManifest.xml
+   **android:theme**'s value could be adjusted accordingly.
 
 ```xml
 
@@ -52,7 +55,7 @@ B. Declare TheImagePicker activity in your AndroidManifest.xml
     
 ```
 
-C. Request large heap memory using "largeHeap" attribute for your application. This will avoid application to
+C. (Optional) Request large heap memory using "largeHeap" attribute for your application. This will avoid application to
 crash on low memory devices. The side effect would be that your application may force
 other applications to be kicked out of memory. Nothing very severe.
 
@@ -67,8 +70,6 @@ other applications to be kicked out of memory. Nothing very severe.
 </application>
 
 ```
-
-``
 
 D. Start TheImagePicker activity and get the result back.
 
