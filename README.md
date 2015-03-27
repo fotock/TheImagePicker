@@ -1,9 +1,13 @@
 # TheImagePicker
 Android library project for multiple image selection.
 
-Based on PolyPicker. Fixed translation and autofocus bugs.
+Based on PolyPicker. Fixed bugs with translation, autofocus, etc.
 
 Requires Android 4.0+.
+
+Result
+==========
+![Result Image](preview.gif "Result Image")
 
 Features
 ==========
