@@ -12,9 +12,10 @@ Features
 
 Download
 ==========
+```groovy
 
 dependencies {
-    compile 'net.the4thdimension:poly-picker:1.0.11'
+    compile 'com.sanfriend:theimagepicker:1.0.4@aar'
 }
 
 ```
@@ -40,6 +41,7 @@ B. Declare TheImagePicker activity in your AndroidManifest.xml
 <activity
     android:name="com.sanfriend.theimagepicker.TheImagePickerActivity"
     android:theme="@android:style/Theme.Holo" />
+    
 ```
 
 C. Request large heap memory using "largeHeap" attribute for your application. This will avoid application to
