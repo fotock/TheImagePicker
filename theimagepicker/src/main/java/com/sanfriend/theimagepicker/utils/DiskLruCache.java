@@ -56,9 +56,9 @@ import java.util.concurrent.TimeUnit;
  * deleted. The limit does not include filesystem overhead or the cache
  * journal so space-sensitive applications should set a conservative limit.
  *
- * <p>Clients call {@link #edit} to create or update the values of an entry. An
+ * <p>Clients call { #edit} to create or update the values of an entry. An
  * entry may have only one editor at one time; if a value is not available to be
- * edited then {@link #edit} will return null.
+ * edited then { #edit} will return null.
  * <ul>
  *     <li>When an entry is being <strong>created</strong> it is necessary to
  *         supply a full set of values; the empty value should be used as a
@@ -67,12 +67,12 @@ import java.util.concurrent.TimeUnit;
  *         to supply data for every value; values default to their previous
  *         value.
  * </ul>
- * Every {@link #edit} call must be matched by a call to {@link com.sanfriend.theimagepicker.utils.DiskLruCache.Editor#commit}
- * or {@link com.sanfriend.theimagepicker.utils.DiskLruCache.Editor#abort}. Committing is atomic: a read observes the full set
+ * Every { #edit} call must be matched by a call to { com.sanfriend.theimagepicker.utils.DiskLruCache.Editor#commit}
+ * or { com.sanfriend.theimagepicker.utils.DiskLruCache.Editor#abort}. Committing is atomic: a read observes the full set
  * of values as they were before or after the commit, but never a mix of values.
  *
- * <p>Clients call {@link #get} to read a snapshot of an entry. The read will
- * observe the value at the time that {@link #get} was called. Updates and
+ * <p>Clients call { #get} to read a snapshot of an entry. The read will
+ * observe the value at the time that { #get} was called. Updates and
  * removals after the call do not impact ongoing reads.
  *
  * <p>This class is tolerant of some I/O errors. If files are missing from the
@@ -792,7 +792,7 @@ public final class DiskLruCache implements Closeable {
          * Returns a new unbuffered output stream to write the value at
          * {@code index}. If the underlying output stream encounters errors
          * when writing to the filesystem, this edit will be aborted when
-         * {@link #commit} is called. The returned output stream does not throw
+         * { #commit} is called. The returned output stream does not throw
          * IOExceptions.
          */
         public OutputStream newOutputStream(int index) throws IOException {

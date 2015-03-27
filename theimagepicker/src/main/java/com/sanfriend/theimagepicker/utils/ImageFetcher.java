@@ -18,7 +18,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * A simple subclass of {@link ImageResizer} that fetches and resizes images fetched from a URL.
+ * A simple subclass of { ImageResizer} that fetches and resizes images fetched from a URL.
  */
 public class ImageFetcher extends ImageResizer {
     private static final String TAG = "ImageFetcher";
@@ -35,9 +35,9 @@ public class ImageFetcher extends ImageResizer {
     /**
      * Initialize providing a target image width and height for the processing images.
      *
-     * @param context
-     * @param imageWidth
-     * @param imageHeight
+     * @param context no description
+     * @param imageWidth no description
+     * @param imageHeight no description
      */
     public ImageFetcher(Context context, int imageWidth, int imageHeight) {
         super(context, imageWidth, imageHeight);
@@ -47,8 +47,8 @@ public class ImageFetcher extends ImageResizer {
     /**
      * Initialize providing a single target image size (used for both width and height);
      *
-     * @param context
-     * @param imageSize
+     * @param context no description
+     * @param imageSize no description
      */
     public ImageFetcher(Context context, int imageSize) {
         super(context, imageSize);
@@ -135,7 +135,7 @@ public class ImageFetcher extends ImageResizer {
     /**
     * Simple network connection check.
     *
-    * @param context
+    * @param context no description
     */
     private void checkConnection(Context context) {
         final ConnectivityManager cm =

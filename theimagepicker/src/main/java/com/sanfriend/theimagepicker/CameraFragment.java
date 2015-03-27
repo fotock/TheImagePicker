@@ -58,8 +58,8 @@ public class CameraFragment extends Fragment {
 
     /**
      * Static factory method
-     * @param sectionNumber
-     * @return
+     * @param sectionNumber no description
+     * @return no description
      */
     public static CameraFragment newInstance(int sectionNumber) {
         CameraFragment fragment = new CameraFragment();
@@ -71,10 +71,10 @@ public class CameraFragment extends Fragment {
 
     /**
      * OnCreateView fragment override
-     * @param inflater
-     * @param container
-     * @param savedInstanceState
-     * @return
+     * @param inflater no description
+     * @param container no description
+     * @param savedInstanceState no description
+     * @return no description
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -106,8 +106,8 @@ public class CameraFragment extends Fragment {
 
     /**
      * Recommended "safe" way to open the camera.
-     * @param view
-     * @return
+     * @param view no description
+     * @return no description
      */
     private boolean safeCameraOpenInView(View view) {
         boolean qOpened = false;
@@ -127,7 +127,7 @@ public class CameraFragment extends Fragment {
 
     /**
      * Safe method for getting a camera instance.
-     * @return
+     * @return no description
      */
     public static Camera getCameraInstance(){
         Camera c = null;
@@ -230,7 +230,7 @@ public class CameraFragment extends Fragment {
 
         /**
          * Extract supported preview and flash modes from the camera.
-         * @param camera
+         * @param camera no descriptions
          */
         private void setCamera(Camera camera)
         {
@@ -254,7 +254,7 @@ public class CameraFragment extends Fragment {
 
         /**
          * The Surface has been created, now tell the camera where to draw the preview.
-         * @param holder
+         * @param holder no description
          */
         public void surfaceCreated(SurfaceHolder holder) {
             try {
@@ -266,7 +266,7 @@ public class CameraFragment extends Fragment {
 
         /**
          * Dispose of the camera preview.
-         * @param holder
+         * @param holder no descriptions
          */
         public void surfaceDestroyed(SurfaceHolder holder) {
             if (mCamera != null){
@@ -276,10 +276,10 @@ public class CameraFragment extends Fragment {
 
         /**
          * React to surface changed events
-         * @param holder
-         * @param format
-         * @param w
-         * @param h
+         * @param holder no description
+         * @param format no description
+         * @param w no description
+         * @param h no description
          */
         public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
             // If your preview can change or rotate, take care of those events here.
@@ -312,8 +312,8 @@ public class CameraFragment extends Fragment {
 
         /**
          * Calculate the measurements of the layout
-         * @param widthMeasureSpec
-         * @param heightMeasureSpec
+         * @param widthMeasureSpec no description
+         * @param heightMeasureSpec no description
          */
         @Override
         protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
@@ -330,11 +330,11 @@ public class CameraFragment extends Fragment {
 
         /**
          * Update the layout based on rotation and orientation changes.
-         * @param changed
-         * @param left
-         * @param top
-         * @param right
-         * @param bottom
+         * @param changed no description
+         * @param left no description
+         * @param top no description
+         * @param right no description
+         * @param bottom no description
          */
         @Override
         protected void onLayout(boolean changed, int left, int top, int right, int bottom)
@@ -380,10 +380,10 @@ public class CameraFragment extends Fragment {
 
         /**
          *
-         * @param sizes
-         * @param width
-         * @param height
-         * @return
+         * @param sizes no description
+         * @param width no description
+         * @param height no description
+         * @return no description
          */
         private Camera.Size getOptimalPreviewSize(List<Camera.Size> sizes, int width, int height)
         {

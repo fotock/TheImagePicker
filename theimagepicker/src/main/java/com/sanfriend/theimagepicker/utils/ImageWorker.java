@@ -46,10 +46,10 @@ public abstract class ImageWorker {
 
     /**
      * Load an image specified by the data parameter into an ImageView (override
-     * {@link com.sanfriend.theimagepicker.utils.ImageWorker#processBitmap(Object)} to define the processing logic). A memory and
-     * disk cache will be used if an {@link com.sanfriend.theimagepicker.utils.ImageCache} has been added using
-     * {@link com.sanfriend.theimagepicker.utils.ImageWorker#addImageCache(android.support.v4.app.FragmentManager, com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams)}. If the
-     * image is found in the memory cache, it is set immediately, otherwise an {@link com.sanfriend.theimagepicker.utils.AsyncTask}
+     * { com.sanfriend.theimagepicker.utils.ImageWorker#processBitmap(Object)} to define the processing logic). A memory and
+     * disk cache will be used if an { com.sanfriend.theimagepicker.utils.ImageCache} has been added using
+     * { com.sanfriend.theimagepicker.utils.ImageWorker#addImageCache(android.support.v4.app.FragmentManager, com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams)}. If the
+     * image is found in the memory cache, it is set immediately, otherwise an { com.sanfriend.theimagepicker.utils.AsyncTask}
      * will be created to asynchronously load the bitmap.
      *
      * @param data The URL of the image to download.
@@ -87,7 +87,7 @@ public abstract class ImageWorker {
     /**
      * Set placeholder bitmap that shows when the the background thread is running.
      *
-     * @param bitmap
+     * @param bitmap bitmap
      */
     public void setLoadingImage(Bitmap bitmap) {
         mLoadingBitmap = bitmap;
@@ -96,16 +96,16 @@ public abstract class ImageWorker {
     /**
      * Set placeholder bitmap that shows when the the background thread is running.
      *
-     * @param resId
+     * @param resId resId
      */
     public void setLoadingImage(int resId) {
         mLoadingBitmap = BitmapFactory.decodeResource(mResources, resId);
     }
 
     /**
-     * Adds an {@link com.sanfriend.theimagepicker.utils.ImageCache} to this {@link com.sanfriend.theimagepicker.utils.ImageWorker} to handle disk and memory bitmap
+     * Adds an { com.sanfriend.theimagepicker.utils.ImageCache} to this { com.sanfriend.theimagepicker.utils.ImageWorker} to handle disk and memory bitmap
      * caching.
-     * @param fragmentManager
+     * @param fragmentManager fragmentManager
      * @param cacheParams The cache parameters to use for the image cache.
      */
     public void addImageCache(FragmentManager fragmentManager,
@@ -116,11 +116,11 @@ public abstract class ImageWorker {
     }
 
     /**
-     * Adds an {@link com.sanfriend.theimagepicker.utils.ImageCache} to this {@link com.sanfriend.theimagepicker.utils.ImageWorker} to handle disk and memory bitmap
+     * Adds an { com.sanfriend.theimagepicker.utils.ImageCache} to this { com.sanfriend.theimagepicker.utils.ImageWorker} to handle disk and memory bitmap
      * caching.
-     * @param activity
+     * @param activity activity
      * @param diskCacheDirectoryName See
-     * {@link com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams#ImageCacheParams(android.content.Context, String)}.
+     * { com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams#ImageCacheParams(android.content.Context, String)}.
      */
     public void addImageCache(FragmentActivity activity, String diskCacheDirectoryName) {
         mImageCacheParams = new ImageCache.ImageCacheParams(activity, diskCacheDirectoryName);
@@ -146,13 +146,13 @@ public abstract class ImageWorker {
      * example, you could resize a large bitmap here, or pull down an image from the network.
      *
      * @param data The data to identify which image to process, as provided by
-     *            {@link com.sanfriend.theimagepicker.utils.ImageWorker#loadImage(Object, android.widget.ImageView)}
+     *            { com.sanfriend.theimagepicker.utils.ImageWorker#loadImage(Object, android.widget.ImageView)}
      * @return The processed bitmap
      */
     protected abstract Bitmap processBitmap(Object data);
 
     /**
-     * @return The {@link com.sanfriend.theimagepicker.utils.ImageCache} object currently being used by this ImageWorker.
+     * @return The { com.sanfriend.theimagepicker.utils.ImageCache} object currently being used by this ImageWorker.
      */
     protected ImageCache getImageCache() {
         return mImageCache;
@@ -160,7 +160,7 @@ public abstract class ImageWorker {
 
     /**
      * Cancels any pending work attached to the provided ImageView.
-     * @param imageView
+     * @param imageView Any imageView
      */
     public static void cancelWork(ImageView imageView) {
         final BitmapWorkerTask bitmapWorkerTask = getBitmapWorkerTask(imageView);
@@ -364,8 +364,8 @@ public abstract class ImageWorker {
      * Called when the processing is complete and the final drawable should be 
      * set on the ImageView.
      *
-     * @param imageView
-     * @param drawable
+     * @param imageView no description
+     * @param drawable no description
      */
     private void setImageDrawable(ImageView imageView, Drawable drawable) {
         if (mFadeInBitmap) {
@@ -390,12 +390,12 @@ public abstract class ImageWorker {
      * Pause any ongoing background work. This can be used as a temporary
      * measure to improve performance. For example background work could
      * be paused when a ListView or GridView is being scrolled using a
-     * {@link android.widget.AbsListView.OnScrollListener} to keep
+     * { android.widget.AbsListView.OnScrollListener} to keep
      * scrolling smooth.
      * <p>
      * If work is paused, be sure setPauseWork(false) is called again
      * before your fragment_camera or activity is destroyed (for example during
-     * {@link android.app.Activity#onPause()}), or there is a risk the
+     * { android.app.Activity#onPause()}), or there is a risk the
      * background thread will never finish.
      */
     public void setPauseWork(boolean pauseWork) {

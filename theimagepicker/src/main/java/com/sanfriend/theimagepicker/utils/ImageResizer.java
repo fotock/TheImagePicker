@@ -14,7 +14,7 @@ import android.os.Build;
 import android.util.Log;
 
 /**
- * A simple subclass of {@link com.sanfriend.theimagepicker.utils.ImageWorker} that resizes images from resources given a target width
+ * A simple subclass of { com.sanfriend.theimagepicker.utils.ImageWorker} that resizes images from resources given a target width
  * and height. Useful for when the input images might be too large to simply load directly into
  * memory.
  */
@@ -26,9 +26,9 @@ public class ImageResizer extends ImageWorker {
     /**
      * Initialize providing a single target image size (used for both width and height);
      *
-     * @param context
-     * @param imageWidth
-     * @param imageHeight
+     * @param context no description
+     * @param imageWidth no description
+     * @param imageHeight no description
      */
     public ImageResizer(Context context, int imageWidth, int imageHeight) {
         super(context);
@@ -38,8 +38,8 @@ public class ImageResizer extends ImageWorker {
     /**
      * Initialize providing a single target image size (used for both width and height);
      *
-     * @param context
-     * @param imageSize
+     * @param context no description
+     * @param imageSize no description
      */
     public ImageResizer(Context context, int imageSize) {
         super(context);
@@ -49,8 +49,8 @@ public class ImageResizer extends ImageWorker {
     /**
      * Set the target image width and height.
      *
-     * @param width
-     * @param height
+     * @param width no description
+     * @param height no description
      */
     public void setImageSize(int width, int height) {
         mImageWidth = width;
@@ -60,7 +60,7 @@ public class ImageResizer extends ImageWorker {
     /**
      * Set the target image size (width and height will be the same).
      *
-     * @param size
+     * @param size no description
      */
     public void setImageSize(int size) {
         setImageSize(size, size);
@@ -70,8 +70,8 @@ public class ImageResizer extends ImageWorker {
      * The main processing method. This happens in a background task. In this case we are just
      * sampling down the bitmap and returning it from a resource.
      *
-     * @param resId
-     * @return
+     * @param resId no description
+     * @return no description
      */
     private Bitmap processBitmap(int resId) {
         if (BuildConfig.DEBUG) {
@@ -233,8 +233,8 @@ public class ImageResizer extends ImageWorker {
     }
 
     /**
-     * Calculate an inSampleSize for use in a {@link android.graphics.BitmapFactory.Options} object when decoding
-     * bitmaps using the decode* methods from {@link android.graphics.BitmapFactory}. This implementation calculates
+     * Calculate an inSampleSize for use in a { android.graphics.BitmapFactory.Options} object when decoding
+     * bitmaps using the decode* methods from { android.graphics.BitmapFactory}. This implementation calculates
      * the closest inSampleSize that is a power of 2 and will result in the final decoded bitmap
      * having a width and height equal to or larger than the requested width and height.
      *

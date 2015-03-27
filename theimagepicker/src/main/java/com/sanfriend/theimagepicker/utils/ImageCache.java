@@ -33,10 +33,10 @@ import android.util.Log;
 
 /**
  * This class handles disk and memory caching of bitmaps in conjunction with the
- * {@link ImageWorker} class and its subclasses. Use
- * {@link com.sanfriend.theimagepicker.utils.ImageCache#getInstance(android.support.v4.app.FragmentManager, com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams)} to get an instance of this
- * class, although usually a cache should be added directly to an {@link ImageWorker} by calling
- * {@link ImageWorker#addImageCache(android.support.v4.app.FragmentManager, com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams)}.
+ * { ImageWorker} class and its subclasses. Use
+ * { com.sanfriend.theimagepicker.utils.ImageCache#getInstance(android.support.v4.app.FragmentManager, com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams)} to get an instance of this
+ * class, although usually a cache should be added directly to an { ImageWorker} by calling
+ * { ImageWorker#addImageCache(android.support.v4.app.FragmentManager, com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams)}.
  */
 public class ImageCache {
     private static final String TAG = "ImageCache";
@@ -68,7 +68,7 @@ public class ImageCache {
     /**
      * Create a new ImageCache object using the specified parameters. This should not be
      * called directly by other classes, instead use
-     * {@link com.sanfriend.theimagepicker.utils.ImageCache#getInstance(android.support.v4.app.FragmentManager, com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams)} to fetch an ImageCache
+     * { com.sanfriend.theimagepicker.utils.ImageCache#getInstance(android.support.v4.app.FragmentManager, com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams)} to fetch an ImageCache
      * instance.
      *
      * @param cacheParams The cache parameters to use to initialize the cache
@@ -78,7 +78,7 @@ public class ImageCache {
     }
 
     /**
-     * Return an {@link com.sanfriend.theimagepicker.utils.ImageCache} instance. A {@link com.sanfriend.theimagepicker.utils.ImageCache.RetainFragment} is used to retain the
+     * Return an { com.sanfriend.theimagepicker.utils.ImageCache} instance. A { com.sanfriend.theimagepicker.utils.ImageCache.RetainFragment} is used to retain the
      * ImageCache object across configuration changes such as a change in device orientation.
      *
      * @param fragmentManager The fragment_camera manager to use when dealing with the retained fragment_camera.
@@ -460,8 +460,8 @@ public class ImageCache {
 
         /**
          * Create a set of image cache parameters that can be provided to
-         * {@link com.sanfriend.theimagepicker.utils.ImageCache#getInstance(android.support.v4.app.FragmentManager, com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams)} or
-         * {@link ImageWorker#addImageCache(android.support.v4.app.FragmentManager, com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams)}.
+         * { com.sanfriend.theimagepicker.utils.ImageCache#getInstance(android.support.v4.app.FragmentManager, com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams)} or
+         * { ImageWorker#addImageCache(android.support.v4.app.FragmentManager, com.sanfriend.theimagepicker.utils.ImageCache.ImageCacheParams)}.
          * @param context A context to use.
          * @param diskCacheDirectoryName A unique subdirectory name that will be appended to the
          *                               application cache directory. Usually "cache" or "images"
@@ -474,7 +474,7 @@ public class ImageCache {
         /**
          * Sets the memory cache size based on a percentage of the max available VM memory.
          * Eg. setting percent to 0.2 would set the memory cache to one fifth of the available
-         * memory. Throws {@link IllegalArgumentException} if percent is < 0.01 or > .8.
+         * memory. Throws { IllegalArgumentException} if percent is < 0.01 or > .8.
          * memCacheSize is stored in kilobytes instead of bytes as this will eventually be passed
          * to construct a LruCache which takes an int in its constructor.
          *
@@ -558,6 +558,9 @@ public class ImageCache {
     /**
      * A hashing method that changes a string (like a URL) into a hash suitable for using as a
      * disk filename.
+     *
+     * @param key no description
+     * @return String no description
      */
     public static String hashKeyForDisk(String key) {
         String cacheKey;
